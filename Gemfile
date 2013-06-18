@@ -33,10 +33,10 @@ group :doc do
 end
 
 group :test, :development do
-	gem 'turn'
 	gem 'rspec-rails'
 	gem 'capybara'
 	gem 'guard-rspec'
+	gem 'launchy'
 end
 
 # Use ActiveModel has_secure_password
