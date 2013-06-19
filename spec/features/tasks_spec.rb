@@ -16,12 +16,10 @@ describe "Tasks" do
     it "creates a new task" do
     	visit tasks_path
     	fill_in 'Task', with: "go to work"
-        click_button 'Add Task'
+      click_button 'Create Task'
 
-        current_path.should == tasks_path
-        page.should have_content 'go to work'
-
-    	save_and_open_page
+      current_path.should == tasks_path
+      page.should have_content 'go to work'
     end
   end
 
@@ -52,6 +50,15 @@ describe "Tasks" do
 
       current_path.should == edit_task_path(@task)
       page.should have_content 'There was an error updating your task.'
+    end
+  end
+
+  describe "DELETE /tasks" do
+    it "should delete a task" do
+      visit tasks_path
+      Task.find(1)
+      click_link 'Delete'
+      page.should have_content 'Task has been deleted'
     end
   end
 end

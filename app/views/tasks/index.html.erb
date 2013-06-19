@@ -6,6 +6,7 @@
 		<li>
 			<%= item.task %>
 			<%= link_to 'Edit', edit_task_path(item) %>
+			<%= link_to 'Delete', item, method: 'delete' %>
 		</li>
 	<% end %>
 </ul>
