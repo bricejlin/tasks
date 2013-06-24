@@ -9,3 +9,42 @@
 	padding: 10px;
 	color: white;
 }
+
+body {
+	background-color: #E1D5DC;
+	margin: 60px auto;
+  font-family: Palatino, 'Palatino Linotype', Times, 'Times New Roman', sans-serif;
+	color: #484848;
+  width: 70%;
+  font-size: 30px;
+  line-height: 50px;
+}
+
+
+h1 {
+	font-size: 64px;
+	text-align: center;
+}
+
+#tasks {
+	border: 2px solid black;
+	margin: 0 auto;
+	word-wrap: break-word;
+}
+
+#form {
+	text-align: center;
+}
+
+li {
+	margin: 0 3%;
+}
+
+@media screen and (max-width: 630px) {
+	body {
+		margin: 10px auto;
+		padding: 0 20px;
+		width: auto;
+		font-size: 15px;
+	}
+}

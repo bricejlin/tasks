@@ -1,7 +1,9 @@
-<h1>Tasks</h1>
-<%= render 'form' %>
 
-<ul>
+<h1>Tasks</h1>
+<div id="tasks">
+	<%= render 'form' %>
+
+<ol>
 	<% for item in @tasks %>
 		<li>
 			<%= item.task %>
@@ -9,4 +11,5 @@
 			<%= link_to 'Delete', item, method: 'delete' %>
 		</li>
 	<% end %>
-</ul>
+</ol>
+</div>
