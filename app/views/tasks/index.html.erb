@@ -1,15 +1,8 @@
+<h1>Task List</h1>
 
-<h1>Tasks</h1>
 <div id="tasks">
 	<%= render 'form' %>
-
-<ol>
-	<% for item in @tasks %>
-		<li>
-			<%= item.task %>
-			<%= link_to 'Edit', edit_task_path(item) %>
-			<%= link_to 'Delete', item, method: 'delete' %>
-		</li>
-	<% end %>
-</ol>
+	<ol>
+	  <%= render @tasks %>
+	</ol>
 </div>

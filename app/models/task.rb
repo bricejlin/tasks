@@ -1,3 +1,3 @@
 class Task < ActiveRecord::Base
-	validates :task, presence: true
+	validates :description, presence: true, uniqueness: { message: "already exists" }
 end
