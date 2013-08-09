@@ -1,2 +1,2 @@
-$('ol#task-list').append("<%= escape_javascript(render @task) %>");
+$('ul#task-list').append("<%= escape_javascript(render @task) %>");
 $('div#<%= dom_id(@task) %>').effect('bounce', 'slow');
