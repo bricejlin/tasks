@@ -1,0 +1,12 @@
+
+  <h2>Task: <%= @task.description %></h2>
+
+<p>
+	<strong>Created:</strong> 
+	<%= time_ago_in_words @task.created_at %> ago
+</p>
+
+<p>
+	<%= link_to "Back", tasks_path %>
+
+</p>
