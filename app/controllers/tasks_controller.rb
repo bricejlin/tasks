@@ -7,10 +7,14 @@ class TasksController < ApplicationController
 
   def create
   	@task = Task.new(task_params)
-  	if @task.save
-  	 redirect_to tasks_path, notice: "Your task has been successfully added."
-    else
-      redirect_to :back, notice: "There was an error creating your task."
+
+    respond_to do |format|
+    	if @task.save
+    	  format.html { redirect_to tasks_path, notice: "Your task has been successfully added." }
+      else
+        format.html { redirect_to :back, notice: "There was an error creating your task." }
+      end
+      format.js
     end
   end
 

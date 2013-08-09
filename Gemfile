@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc1'
-gem 'rails_12factor', group: :production
+gem 'rails', '4.0.0'
+gem 'jquery-ui-rails'
 
 # Use sqlite3 as the database for Active Record
 group :development do
@@ -11,11 +11,12 @@ group :development do
 end
 group :production do
 	gem 'pg'
+	gem 'rails_12factor'
 end
 
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
